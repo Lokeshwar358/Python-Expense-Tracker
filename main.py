@@ -13,7 +13,7 @@ def search_expenses():
   b=True
   for i in my_exp:
     if i["category"] == a:
-      print(f"Date:{i["date"]}\nCategory: {i["category"]}\nDescription:{i["Description"]}\nAmount:{i["Amount"]}")
+      print(f"Date:{i['date']}\nCategory: {i['category']}\nDescription:{i['Description']}\nAmount:{i['Amount']}")
       b=False
   if b:
       print("No Expense Found")
@@ -25,7 +25,7 @@ def calculate_total():
 def category_summary():
  summary={}
  for i in my_exp:
-  if i["category"] in sum:
+  if i["category"] in summary:
     summary[i["category"]]+=i["Amount"]
   else:
       summary[i["category"]]=i["Amount"]
